@@ -5,7 +5,8 @@
 
 TZ="Asia/Kolkata"
 DISK="/dev/sdb"
-AUTHORIZED_KEYS="https://raw.githubusercontent.com/kovidgoyal/kovidgoyal.github.io/refs/heads/master/authorized_keys"
+AUTHORIZED_KEYS="https://github.com/InkWOX/arch.ovh/blob/4e0f4801d55e259530861ee73ec6efb3a217505e/authorized_keys"
+
 
 set -o nounset
 set -o errexit
