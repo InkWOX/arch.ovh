@@ -165,7 +165,7 @@ function finalize() {
     mkinitcpio -P
 
     mkdir -p /root/.ssh
-    curl -fSsL "$AUTHORIZED_KEYS" > /root/.ssh/authorized_keys
+    echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAgEAuKasjQAb4rCMEUYnnsbMmfKXi/9k0+slAD5MfEo4z7WNy2KvXtwGICzJj/TFdkGsjqfe7ccVyKBq8Iuhoydvfz89VluCTHlGXMruG8Ffw5PHTdt+gRRPwIjJ7HNxudTT2eNHgohwpthoQZJUj2UgB6QYYBs3kXnm1FAiYnAvoTjbENzfOI94fyeSamDMcEReLj05G9UIrnqa9x/JXCLy2GEDM20AnnreJhtJ4LsQjdv4WggEtw9jD0nUtwVGp6w5C/B5PNy2z0XrpXA8W8isp0miLMXM+R9CK121IonDOOwzjPYlijLD2Vg9PgJABqTsggAu/0yCf9p0mPYMt/liiUAQJKUHWUoC2Td4DwGDomNKLxyqzMFGfb6+EbP9t+7Za99fFfmRxG9j+b5Ku2ZZcVNKedbaCUEyjc9mTBw/546cypNKVCczboo/FyvUScd6K0nFy949lwh12PB4V2/me3+u72livC+sq1HBNKr0s+RKCO5w0uSCrBJeYJCwuN3nrOuPXV5yXXiR1mRsCJKy2KibgRLXJWh3eihjpHkvDM7Y8kUii4HS6h2CUqphK8aiooQQERMRQ87ACKkrlqXv3xbq9u42Mm/IZE4lZVUY41QCe5ZRo9vgm3UbDUVwNbIw1RHqfDZ25GpqKD6liMmOYR+ZGli3bCwezXq9GLGXpv8= anyshithappens@gmail.com" > /root/.ssh/authorized_keys
 }
 
 case "$ACTION" in
