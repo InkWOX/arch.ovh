@@ -3,7 +3,7 @@
 # Edit the TZ and AUTHORIZED_KEYS variables first, if needed.
 # curl -fSsL https://raw.githubusercontent.com/kovidgoyal/kovidgoyal.github.io/refs/heads/master/setup-ovh-arch.sh > /tmp/bootstrap.sh && chmod +x /tmp/bootstrap.sh && /tmp/bootstrap.sh myhostname
 
-TZ="Asia/Kolkata"
+TZ="Europe/London"
 DISK="/dev/sdb"
 AUTHORIZED_KEYS="https://github.com/InkWOX/arch.ovh/blob/4e0f4801d55e259530861ee73ec6efb3a217505e/authorized_keys"
 
@@ -92,7 +92,7 @@ function main() {
 
     sed -i -e 's@#Server = https://mirror.rackspace.com@Server = https://mirror.rackspace.com@' /bootstrap/etc/pacman.d/mirrorlist
     sed -i -e 's/#ParallelDownloads/ParallelDownloads/' /bootstrap/etc/pacman.conf
-    cp "$SCRIPT_PATH" /bootstrap/root/bootstrap.sh
+    cp /tmp/setup-ovh-arch.sh /bootstrap/root/bootstrap.sh
     cd /
     /bootstrap/bin/arch-chroot /bootstrap /root/bootstrap.sh 'do_pacstrap'
     /bootstrap/bin/arch-chroot /bootstrap/mnt/ /root/bootstrap.sh 'finalize' "$ACTION"
